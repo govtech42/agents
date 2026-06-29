@@ -12,9 +12,9 @@ const program = new Command();
 program
   .name("aai")
   .description(
-    "Unified installer for personal AI agents (OpenClaw, NanoClaw, IronClaw, Hermes, Paperclip) — everything via Docker, local or remote (SSH).",
+    "Unified Docker installer for personal AI agents (OpenClaw, Hermes, Paperclip) with optional GBrain memory, local or remote over SSH.",
   )
-  .version("0.2.0");
+  .version("1.0.0");
 
 /** Attach the shared remote-target options to a command. */
 function withTargetOptions(cmd: Command): Command {
