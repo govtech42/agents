@@ -43,6 +43,9 @@ RUN curl -fsSL https://deb.nodesource.com/setup_24.x | bash - \\
 
 RUN npm install -g openclaw@latest
 
+# Global AI coding agents (accessible from inside the container)
+RUN npm install -g --omit=dev @anthropic-ai/claude-code@latest @openai/codex@latest opencode-ai 2>/dev/null || true
+
 ENV HOME=/root \\
     OPENCLAW_STATE_DIR=/config \\
     OPENCLAW_CONFIG_DIR=/config \\
