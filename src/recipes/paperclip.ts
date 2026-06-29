@@ -96,6 +96,7 @@ ENTRYPOINT ["docker-entrypoint.sh"]
 CMD ["node", "--import", "./server/node_modules/tsx/dist/loader.mjs", "server/dist/index.js"]
 `,
   envTemplate: `# Paperclip configuration
+BETTER_AUTH_SECRET=aai-paperclip-change-me
 # ANTHROPIC_API_KEY=
 # OPENAI_API_KEY=
 # PAPERCLIP_PORT=3100
