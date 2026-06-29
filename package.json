@@ -1,7 +1,7 @@
 {
   "name": "aai",
-  "version": "0.1.0",
-  "description": "Unified installer for personal AI agents (OpenClaw, NanoClaw, IronClaw, Hermes, Paperclip) — everything via Docker.",
+  "version": "1.0.0",
+  "description": "Unified Docker installer for personal AI agents (OpenClaw, Hermes, Paperclip) with optional GBrain memory.",
   "type": "module",
   "bin": {
     "aai": "dist/index.js"

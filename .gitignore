@@ -11,4 +11,7 @@ dist/
 # Saved remote SSH targets (infra coordinates + key paths — not secrets, but private)
 /targets/
 
+# Environment variables (secrets — never commit)
+.env
+
 .DS_Store
