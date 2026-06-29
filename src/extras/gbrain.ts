@@ -48,6 +48,14 @@ RUN bun install -g github:garrytan/gbrain \\
   && ln -sf /root/.bun/bin/bun /usr/local/bin/bun \\
   && ln -sf /root/.bun/bin/gbrain /usr/local/bin/gbrain
 
+# Node.js (needed for global AI coding agents)
+RUN curl -fsSL https://deb.nodesource.com/setup_22.x | bash - \\
+  && apt-get install -y nodejs \\
+  && rm -rf /var/lib/apt/lists/*
+
+# Global AI coding agents
+RUN npm install -g --omit=dev @anthropic-ai/claude-code@latest @openai/codex@latest opencode-ai 2>/dev/null || true
+
 ENV HOME=/data
 WORKDIR /data
 EXPOSE 7077

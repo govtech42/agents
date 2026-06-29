@@ -71,6 +71,9 @@ RUN apt-get update && apt-get install -y --no-install-recommends \\
 
 RUN npm install -g pnpm
 
+# Global AI coding agents (accessible from inside the container)
+RUN npm install -g --omit=dev @anthropic-ai/claude-code@latest @openai/codex@latest opencode-ai 2>/dev/null || true
+
 WORKDIR /opt/hermes
 
 # Clone the repo
